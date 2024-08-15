@@ -1,0 +1,12 @@
+<h1>Movies#index</h1>
+<p>Find me in app/views/movies/index.html.erb</p>
+
+<h1>Movie list</h1>
+
+  <% @movies.each do |movie| %>
+   <div class="container">
+      <h2><%= movie.title %></h2>
+      <p><%= movie.overview %></p>
+      <img src="<%= movie.poster_url %>" alt="<%= movie.title %>">
+   </div>
+  <% end %>

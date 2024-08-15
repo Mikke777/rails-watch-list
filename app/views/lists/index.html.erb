@@ -1,0 +1,11 @@
+<h1>Lists#index</h1>
+<p>Find me in app/views/lists/index.html.erb</p>
+
+
+<h1>Movie list</h1>
+<% @lists.each do |list| %>
+  <h2><%= link_to list.name, list_path(list) %></h2>
+<% end %>
+
+<%= link_to 'Create a new List', new_list_path %>
+<%= link_to 'Add a new Bookmark', new_bookmark_path(@bookmark) %>
