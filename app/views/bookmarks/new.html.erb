@@ -1,9 +1,10 @@
-<h1>Bookmarks#new</h1>
-<p>Find me in app/views/bookmarks/new.html.erb</p>
-
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie, collection: Movie.order(:title), prompt: "Choose a movie" %>
-  <%= f.association :list, collection: List.order(:name), prompt: "Choose a list" %>
-  <%= f.submit "Submit new Bookmark", class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <h1>Create a new Bookmark for the list: <%= @list.name %></h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie, collection: Movie.order(:title), prompt: "Choose a movie" %>
+    <%= f.submit "Submit new Bookmark", class: "btn btn-primary w-100 mb-5" %>
+  <% end %>
+  <%= link_to 'Back to the List', list_path(@list), class: "d-block btn btn-primary mb-2" %>
+  <%= link_to ' Back all the lists', lists_path, class: "d-block btn btn-primary mb-2" %>
+</div>

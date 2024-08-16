@@ -1,12 +1,21 @@
-<h1>Lists#show</h1>
-<p>Find me in app/views/lists/show.html.erb</p>
+<div class="container">
+  <h1><%= @list.name %></h1>
+  <div class="grid">
+  <% @bookmarks.each do |bookmark| %>
+    <div class="card-movie-bookmark mb-2" >
+      <%= image_tag bookmark.movie.poster_url, class:"img_movie" %>
+      <div class="card-movie-bookmark-info">
+        <div>
+          <p><%= bookmark.movie.title %></p>
+          <p><%= bookmark.comment %></p>
+          <%= link_to 'Delete', bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger w-100" %>
+          <hr>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
 
-<h1><%= @list.name %></h1>
-
-<% @bookmarks.each do |bookmark| %>
-  <h2><%= bookmark.comment %></h2>
-  <p>Movie: <%= bookmark.movie.title %></p>
-  <%= link_to 'Delete', bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-  <hr>
-<% end %>
-<%= link_to 'Add a new Bookmark', new_list_bookmark_path(@list) %>
+<%= link_to 'Add a new Bookmark', new_list_bookmark_path(@list), class: "d-block btn btn-primary mb-2" %>
+<%= link_to "all the lists", lists_path, class: "d-block btn btn-primary mb-2" %>
+</div>
