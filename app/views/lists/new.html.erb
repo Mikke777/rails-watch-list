@@ -3,6 +3,6 @@
 
 <%= simple_form_for [@list] do |f| %>
   <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
+  <%= f.input :photos, as: :file %>
   <%= f.submit "Submit new List", class: "btn btn-primary" %>
 <% end %>
