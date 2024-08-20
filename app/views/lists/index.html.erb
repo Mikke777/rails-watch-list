@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://img.freepik.com/free-photo/3d-cinema-theatre-seating_23-2151005461.jpg?t=st=1724175784~exp=1724179384~hmac=d8bb6fb92cab153309fe4eb29a635aadba10fba9b11770958d78c5d8304250da&w=1380);">
   <div class="container">
     <h1>All my lists</h1>
   </div>
@@ -8,7 +8,6 @@
   <div class="grid">
     <% @lists.each do |list| %>
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
-      <%= @list.photos.key, brightness: 30, radius: 20, width: 150, height: 150, crop: :thumb, gravity: :face %>
         <%= link_to list.name, list_path(list) %>
       </div>
     <% end %>
