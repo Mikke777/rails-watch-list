@@ -27,12 +27,3 @@ url = "https://tmdb.lewagon.com/movie/top_rated"
     )
   end
 end
-
-List.create(name: "Action")
-List.create(name: "Horror")
-List.create(name: "Comedy")
-List.create(name: "Drama")
-List.create(name: "Science fiction")
-List.create(name: "Romance")
-List.create(name: "Western")
-List.create(name: "Crime film")

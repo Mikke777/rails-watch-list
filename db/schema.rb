@@ -56,7 +56,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_19_194958) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.jsonb "photos"
+    t.string "photos"
   end
 
   create_table "movies", force: :cascade do |t|
