@@ -1,10 +1,10 @@
 <div class="container d-flex justify-content-center mt-5">
   <div class="col-4">
-    <h1>Create your new list!</h1>
+    <h1>Edit: <%= @list.name %></h1>
     <%= simple_form_for [@list] do |f| %>
-      <%= f.input :name, label: "List Name:" %>
+      <%= f.input :name %>
       <%= f.input :photos, as: :file %>
-      <%= f.submit "Submit new List", class: "btn btn-primary w-100" %>
+      <%= f.submit "Update List", class: "btn btn-primary w-100" %>
     <% end %>
   </div>
 </div>
