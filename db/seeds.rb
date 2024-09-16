@@ -9,7 +9,14 @@
 #   end
 require 'open-uri'
 require 'json'
+
 puts "Cleaning up database..."
+
+Bookmark.destroy_all
+Movie.destroy_all
+User.destroy_all
+
+puts "Importing movies..."
 
 url = "https://tmdb.lewagon.com/movie/top_rated"
 
