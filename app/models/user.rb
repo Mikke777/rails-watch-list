@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :lists, dependent: :destroy
   has_one_attached :photo
+  validates :username, length: { maximum: 13 }
 end

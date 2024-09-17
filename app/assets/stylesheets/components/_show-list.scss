@@ -1,0 +1,127 @@
+.container-show-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 1rem;
+    justify-items: center;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card-movie-bookmark {
+    position: relative; /* Required to position the "X" button inside the card */
+    display: flex;
+    background-color: var(--card-background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .container-poster {
+      width: 40%;
+      .img_movie {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .card-movie-bookmark-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 60%;
+      padding: 1rem;
+      text-align: left;
+
+      .container-info-bookmark {
+        div {
+          p {
+            margin: 0.5rem 0;
+            color: #444;
+            font-size: 1rem;
+          }
+
+          hr {
+            margin: 1rem 0;
+            border: 0.5px solid #ddd;
+          }
+        }
+      }
+    }
+
+    .container-button-delete {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+
+      .delete-bookmark {
+        background-color: transparent;
+        color: var(--button-delete);
+        font-size: 1.5rem;
+        padding: 0.2rem 0.5rem;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        text-decoration: none;
+
+        &:hover {
+          background-color: var(--button-delete);
+          color: white;
+        }
+      }
+    }
+  }
+
+
+
+  .button-show-list {
+    display: inline-block;
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: #0056b3;
+      transform: translateY(-3px);
+    }
+
+    & + .button-show-list {
+      margin-left: 1rem;
+    }
+  }
+}

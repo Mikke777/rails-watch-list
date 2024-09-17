@@ -9,3 +9,19 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.nav-link {
+  color: var(--link-color);
+
+  &:hover {
+    color: var(--muted-text-color);
+  }
+}
+
+.navbar-brand {
+  transition: transform 1s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

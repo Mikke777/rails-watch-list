@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @movies = Movie.all
+    @movies = Movie.order("RANDOM()").limit(8)
   end
 
   def show

@@ -8,8 +8,8 @@
       <%= f.input :username,
                   required: true,
                   autofocus: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :photos, as: :file %>
+                  input_html: { autocomplete: "email", maxlength: 13 }%>
+      <%= f.input :photo, as: :file %>
       <%= f.input :email, required: true, autofocus: true %>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

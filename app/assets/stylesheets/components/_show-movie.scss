@@ -1,0 +1,54 @@
+.show_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.show_movie_container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.poster_container {
+  max-width: 300px; /* Adjust to the desired width of the poster */
+
+  .img_movie {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto;
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for better look */
+  }
+}
+
+.movie-info {
+  flex-grow: 1; /* Ensures the info takes up remaining space */
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+  }
+}
+
+.rails-button {
+  background-color: var(--button-bg);
+  text-decoration: none;
+  color: var(--button-text-color);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--button-bg-hover);
+  }
+}

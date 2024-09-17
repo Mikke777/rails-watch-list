@@ -1,3 +1,12 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
-<h1><%= @movie.title %></h1>
+<div class="show_container">
+  <div class="show_movie_container">
+    <div class="poster_container">
+      <%= image_tag @movie.poster_url, class:"img_movie" %>
+    </div>
+  <div class="movie-info">
+    <h1><%= @movie.title %></h1>
+    <p><%= @movie.overview %></p>
+    <%= link_to 'Back to Movies', movies_path, class: "rails-button" %>
+  </div>
+  </div>
+</div>

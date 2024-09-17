@@ -1,12 +1,25 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
-
-<h1>Movie list</h1>
-
-  <% @movies.each do |movie| %>
-   <div class="container">
-      <h2><%= movie.title %></h2>
-      <p><%= movie.overview %></p>
-      <img src="<%= movie.poster_url %>" alt="<%= movie.title %>">
-   </div>
-  <% end %>
+<div class="banner">
+  <div class="image-railsy">
+    <%= image_tag "Rails Watchlist.png" %>
+  </div>
+  <div class="image-railsy-baloon">
+    <%= image_tag "ballon.png" %>
+    <% if user_signed_in? %>
+     <h4 style="position: absolute; top: 30%; left: 25%;">Hello there, <strong style="color: black; background-color: white;"><%= current_user.username %></strong>! Go to your lists!</h4>
+    <% else %>
+     <h4>Hi! I am Railsy! Welcome to RailsWatchlist! Would you like to Bookmark your favorite films? Your journey start with login!</h4>
+    <% end %>
+  </div>
+</div>
+<div class="container">
+  <h1>Some of our Films!</h1>
+    <div class="grid">
+      <% @movies.each do |movie| %>
+        <div class="grid-item">
+          <a href="<%= movie_path(movie) %>"><%= movie.title %></a>
+          <img src="<%= movie.poster_url %>" alt="<%= movie.title %>">
+          <p><%= movie.overview %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>

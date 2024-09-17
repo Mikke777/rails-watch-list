@@ -1,19 +1,26 @@
 .banner {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
+  display: flex;
+  justify-content: center;
   margin-bottom: 2rem;
 }
 
-.banner h1 {
-  margin: 0;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
+.image-railsy-baloon {
+  position: relative; /* Make this element the reference for absolutely positioned children */
 }
 
-.banner p {
-  font-size: 20px;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+.image-railsy-baloon img {
+  width: 500px;
+  height: 400px;
+  animation: pulse 2s infinite;
+}
+
+.image-railsy-baloon h4 {
+  position: absolute;
+  top: 23%;
+  left: 25%;
+  width: 18rem;
+  border-radius: 50%;
+  color: black;
+  background-color: white;
+  animation: pulse 2s infinite;
 }

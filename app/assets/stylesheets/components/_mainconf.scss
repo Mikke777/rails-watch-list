@@ -5,7 +5,7 @@
   --accent-color: #c9ada7;
   --highlight-color: #d4af37;
   --background-color: #1b1b1e;
-  --card-background-color: #3e3b3c;
+  --card-background-color: #bc0707;
 
   --text-color: #eaeaea;
   --muted-text-color: #b1a7a6;
@@ -14,6 +14,9 @@
 
   --button-bg: #6b3e3e;
   --button-text-color: #f8f8f2;
+  --button-bg-hover: #420f1e;
+  --button-bg-active: #240610;
+  --button-delete: #ff0000;
 
 
   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -47,4 +50,9 @@
 *{
   background-color: var(--primary-color);
   color: var(--text-color);
+}
+
+
+body {
+  background-color: var(--primary-color);
 }
