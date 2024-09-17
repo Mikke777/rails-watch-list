@@ -1,11 +1,16 @@
 <div class="container-lists">
   <h1>All my lists</h1>
-  <div class="grid-lists">
+  <% if @lists.length == 0 %>
+  <p>You haven't created any lists yet. Let's start by creating one.</p>
+  <% else %>
+<div class="grid-lists">
     <% @lists.each do |list| %>
       <div class="card-lists" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(list.photos.key) %>)">
         <%= link_to list.name, list_path(list), class:"a-lists" %>
+        <%= link_to 'Delete', list_path(list), method: :delete, data: { confirm: 'Are you sure?' }, class: "delete-button" %>
       </div>
     <% end %>
   </div>
+  <% end %>
   <%= link_to 'Create a new List', new_list_path, class: "button-lists" %>
 </div>

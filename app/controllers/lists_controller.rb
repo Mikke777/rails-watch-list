@@ -40,6 +40,12 @@ class ListsController < ApplicationController
     end
   end
 
+  def destroy
+    @list.destroy
+
+    redirect_to lists_url, notice: 'List was successfully deleted.'
+  end
+
   private
 
   def list_params
