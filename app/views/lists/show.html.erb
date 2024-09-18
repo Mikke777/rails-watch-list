@@ -1,6 +1,8 @@
 <div class="container-show-list">
   <h1><%= @list.name %></h1>
-  <p>Here you can list all the movies you want to see, in order to add one you have to add a "Bookmark"</p>
+  <% if @bookmarks.length == 0 %>
+    <p>Hey you didn´t bookmarked anything yet! Start bookmarking with the button "Add a new Bookmark"</p>
+  <% else %>
     <div class="grid">
     <% @bookmarks.each do |bookmark| %>
       <div class="card-movie-bookmark" >
@@ -19,6 +21,7 @@
       </div>
     <% end %>
     </div>
+  <% end %>
   <%= link_to 'Add a new Bookmark', new_list_bookmark_path(@list), class: "button-show-list" %>
   <%= link_to "all the lists", lists_path, class: "button-show-list" %>
   <%= link_to 'Edit this list', edit_list_path(@list), class: "button-show-list" %>

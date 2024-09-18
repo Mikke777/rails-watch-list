@@ -41,9 +41,10 @@ class ListsController < ApplicationController
   end
 
   def destroy
-    @list.destroy
+    @list = List.find(params[:id]) # Find the list before attempting to destroy it
+    @list.destroy # This will now also destroy associated bookmarks
 
-    redirect_to lists_url, notice: 'List was successfully deleted.'
+  redirect_to lists_url, notice: 'List was successfully deleted.'
   end
 
   private
