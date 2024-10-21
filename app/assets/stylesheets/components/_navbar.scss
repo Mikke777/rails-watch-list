@@ -25,3 +25,16 @@
     transform: scale(1.05);
   }
 }
+
+/* Responsive */
+
+@media (max-width: 575px) {
+  .avatar {
+    display: none;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+}

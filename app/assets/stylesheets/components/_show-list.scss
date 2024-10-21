@@ -1,6 +1,4 @@
 .container-show-list {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 2rem;
   text-align: center;
 
@@ -20,8 +18,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    padding: 1rem;
-    justify-items: center;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -31,18 +27,14 @@
   .card-movie-bookmark {
     position: relative;
     display: flex;
-    background-color: var(--card-background-color);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 600px;
-    height: 400px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
       transform: translateY(-10px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 16px rgb(0, 0, 0);
     }
 
     .container-poster {
@@ -102,8 +94,6 @@
     }
   }
 
-
-
   .button-show-list {
     display: inline-block;
     background-color: var(--button-bg);
@@ -114,14 +104,67 @@
     text-decoration: none;
     margin-top: 2rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
 
     &:hover {
-      background-color: #0056b3;
+      background-color: var(--background-color);
       transform: translateY(-3px);
+      color: var(--highlight-color);
+    }
+  }
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .container-show-list {
+    .grid {
+      grid-template-columns: 1fr;
     }
 
-    & + .button-show-list {
-      margin-left: 1rem;
+    .card-movie-bookmark {
+      width: 100%;
+    }
+  }
+  .button-show-list {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .container-show-list {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    .card-movie-bookmark {
+      width: 100%;
+      height: 250px;
+    }
+  }
+}
+
+
+
+@media (max-width: 460px) {
+  .container-show-list {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .card-movie-bookmark {
+      width: 100%;
+      height: 200px;
     }
   }
 }

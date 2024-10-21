@@ -1,10 +1,11 @@
 <div class="container d-flex justify-content-center mt-5">
   <div class="col-4">
-    <h1>Create your new list!</h1>
+    <h1 class="form-new-list-title">Create your new list!</h1>
     <%= simple_form_for [@list] do |f| %>
       <%= f.input :name, label: "List Name:" %>
       <%= f.input :photos, as: :file %>
       <%= f.submit "Submit new List", class: "button-new-list" %>
     <% end %>
+    <%= link_to 'Back to the Homepage', root_path, class: "ancor-new-list" %>
   </div>
 </div>

@@ -4,22 +4,22 @@
     <p>Hey you didn´t bookmarked anything yet! Start bookmarking with the button "Add a new Bookmark"</p>
   <% else %>
     <div class="grid">
-    <% @bookmarks.each do |bookmark| %>
-      <div class="card-movie-bookmark" >
-        <div class="container-poster">
-          <%= image_tag bookmark.movie.poster_url, class:"img_movie" %>
-        </div>
-        <div class="card-movie-bookmark-info">
-          <div class="container-info-bookmark">
-              <p><%= bookmark.movie.title %></p>
-              <p>Your comment: <%= bookmark.comment %></p>
-            <div class="container-button-delete">
-              <%= link_to '×', bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "delete-bookmark" %>
+      <% @bookmarks.each do |bookmark| %>
+        <div class="card-movie-bookmark" >
+          <div class="container-poster">
+            <%= image_tag bookmark.movie.poster_url, class:"img_movie" %>
+          </div>
+          <div class="card-movie-bookmark-info">
+            <div class="container-info-bookmark">
+                <p><%= bookmark.movie.title %></p>
+                <p>Your comment: <%= bookmark.comment %></p>
+              <div class="container-button-delete">
+                <%= link_to '×', bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "delete-bookmark" %>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
     </div>
   <% end %>
   <%= link_to 'Add a new Bookmark', new_list_bookmark_path(@list), class: "button-show-list" %>

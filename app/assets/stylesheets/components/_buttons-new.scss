@@ -19,3 +19,29 @@
     transform: translateY(0);
   }
 }
+
+/* Responsive */
+
+@media (max-width: 575px) {
+ .button-new-list {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 769px) {
+  .button-new-list {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .button-new-list {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .button-new-list {
+    font-size: 0.5rem;
+  }
+}

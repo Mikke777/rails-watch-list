@@ -69,7 +69,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  background-color: var(--accent-color); /* Semi-transparent overlay on text */
+  background-color: var(--accent-color);
   padding: 0.5rem 1rem;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -88,14 +88,11 @@
   font-size: 1.2rem;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 
   &:hover {
-    background-color: var(--button-bg-hover);
-    transform: translateY(-2px);
-  }
-
-  &:active {
-    background-color: var(--button-bg-active);
-    transform: translateY(0);
+    background-color: var(--background-color);
+    color: var(--highlight-color);
+    transform: translateY(-3px);
   }
 }

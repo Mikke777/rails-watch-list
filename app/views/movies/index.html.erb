@@ -15,7 +15,7 @@
   <h1>Some of our Films!</h1>
     <div class="grid">
       <% @movies.each do |movie| %>
-        <div class="grid-item">
+        <div class="grid-item-movie-index">
           <a href="<%= movie_path(movie) %>"><%= movie.title %></a>
           <img src="<%= movie.poster_url %>" alt="<%= movie.title %>">
           <p><%= movie.overview %></p>

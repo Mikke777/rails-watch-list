@@ -1,0 +1,34 @@
+.button-new-bookmark-form {
+  width: 100%;
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: var(--background-color);
+    transform: translateY(-3px);
+    color: var(--highlight-color);
+  }
+}
+
+.ancor-new-bookmark-form {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  background-color: var(--button-bg);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  color: var(--button-text-color);
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    color: var(--highlight-color);
+    background-color: var(--background-color);
+    transform: translateY(-3px);
+  }
+}
